@@ -1,13 +1,6 @@
+// src/pages/Home.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { ThemeProvider } from 'styled-components';
-import styled from 'styled-components'; // Asegúrate de importar styled desde styled-components
-import { theme } from './theme';
-import './App.css';
-import Home from './pages/Home';
-import Services from './pages/Services';
-import Contact from './pages/Contact';
-import About from './pages/About';
+import styled from 'styled-components';
 
 const Container = styled.div`
   text-align: center;
@@ -68,19 +61,29 @@ const FooterText = styled.p`
   color: gray.500;
 `;
 
-function App() {
+const Home = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </Router>
-    </ThemeProvider>
-  );
-}
+    <Container>
+      <Title>Agro Click</Title>
+      <Subtitle>Conectando la agricultura con la tecnología</Subtitle>
+      <StyledButton>¡Haz clic aquí!</StyledButton>
 
-export default App;
+      <WelcomeSection>
+        <WelcomeText>Bienvenidos a Agro Click</WelcomeText>
+      </WelcomeSection>
+
+      <ServicesSection>
+        <Title as="h2">Nuestros Servicios</Title>
+        <Subtitle>
+          Aquí puedes agregar información sobre los servicios o productos relacionados con la agricultura y la tecnología que ofrece Agro Click.
+        </Subtitle>
+      </ServicesSection>
+
+      <Footer>
+        <FooterText>© 2024 Agro Click. Todos los derechos reservados.</FooterText>
+      </Footer>
+    </Container>
+  );
+};
+
+export default Home;

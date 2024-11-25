@@ -1,18 +1,16 @@
+/* App.css - Estilos básicos que no interfieren con Chakra UI */
+
 .App {
   text-align: center;
 }
 
+/* Eliminar la animación del logo de React, ya que no se está usando */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
+/* Estilo de encabezado predeterminado, que se puede eliminar si no lo necesitas */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,10 +22,12 @@
   color: white;
 }
 
+/* Elimina las reglas de enlace de React si no las estás utilizando */
 .App-link {
   color: #61dafb;
 }
 
+/* Si no utilizas el logo animado, puedes eliminar esta parte */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
